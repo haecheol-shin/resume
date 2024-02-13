@@ -1,9 +1,11 @@
 package project.resume.domain.member;
 
+import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Data
+@Entity
 public class Member {
 
     private Long id;
