@@ -19,6 +19,16 @@ public class ProjectService {
         return projectRepository.findAll();
     }
 
+    public void createProject(Project project) {
+        projectRepository.save(project);
+    }
+
+    public void deleteProject(Long id) {
+        projectRepository.deleteById(id);
+    }
+
+    // 수정 만들어야 함.
+
 
 
 }

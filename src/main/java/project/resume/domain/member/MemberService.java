@@ -8,4 +8,12 @@ import org.springframework.stereotype.Service;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+
+    public void createMember(Member member) {
+        memberRepository.save(member);
+    }
+
+    public Member findMember(Long id) {
+        return memberRepository.findById(id);
+    }
 }

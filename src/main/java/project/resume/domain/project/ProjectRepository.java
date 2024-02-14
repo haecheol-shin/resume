@@ -25,8 +25,18 @@ public class ProjectRepository {
     }
 
     // Create
-
-    // Update
+    public void save(Project project) {
+        if (project.getId() == null) { // create
+            em.persist(project);
+        } else {
+            em.merge(project); // update
+        }
+    }
 
     // Delete
+    public void deleteById(Long id) {
+        em.createQuery("delete p from Project p where p.id = :id")
+                .setParameter("id", id)
+                .executeUpdate();
+    }
 }
