@@ -16,4 +16,8 @@ public class MemberService {
     public Member findMember(Long id) {
         return memberRepository.findById(id);
     }
+
+    public void deleteMember(Member member) {
+        memberRepository.delete(member);
+    }
 }
