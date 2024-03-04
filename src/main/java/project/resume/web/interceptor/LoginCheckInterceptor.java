@@ -8,5 +8,6 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 로그인이 된 사용자 인지 세션을 확인하여 체크
+        return true;
     }
 }
